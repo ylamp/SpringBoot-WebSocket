@@ -12,12 +12,10 @@
   5.添加好友上线提醒和下线提醒的功能，当有好友上线或下线时自动通知所有其他在线人。
   
   效果图：
-   ![alt text](https://github.com/shenzhanwang/Spring-websocket/blob/master/%E6%88%AA%E5%9B%BE/1.jpg)
+  ![输入图片说明](http://git.oschina.net/uploads/images/2016/1121/155000_fbd7a93b_1110335.jpeg "在这里输入图片标题")
    
-   ![alt text](https://github.com/shenzhanwang/Spring-websocket/blob/master/%E6%88%AA%E5%9B%BE/2.jpg)
-   
-    ![上线提醒](https://github.com/shenzhanwang/Spring-websocket/blob/master/截图/3.jpg) 
-   
-   ![alt text](https://github.com/shenzhanwang/Spring-websocket/blob/master/%E6%88%AA%E5%9B%BE/4.jpg)
-   
-   
+![输入图片说明](http://git.oschina.net/uploads/images/2016/1121/155008_ad2d6e7a_1110335.jpeg "在这里输入图片标题")
+
+![输入图片说明](http://git.oschina.net/uploads/images/2016/1121/155016_df4cf908_1110335.jpeg "在这里输入图片标题")
+
+![输入图片说明](http://git.oschina.net/uploads/images/2016/1121/155029_5e3afabc_1110335.jpeg "在这里输入图片标题")
