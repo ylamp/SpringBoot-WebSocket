@@ -1,6 +1,8 @@
 package boot.spring.po;
 
 import java.util.Date;
+
+import com.alibaba.fastjson.annotation.JSONField;
 public class Message {
 
 	//发送者
@@ -11,7 +13,8 @@ public class Message {
 	public Long to;
 	//发送的文本
 	public String text;
-	//发送日期
+	//发送时间
+	@JSONField(format="yyyy-MM-dd HH:mm:ss")
 	public Date date;
 
 	public Long getFrom() {

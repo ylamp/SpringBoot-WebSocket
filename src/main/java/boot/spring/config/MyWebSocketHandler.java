@@ -1,9 +1,7 @@
 package boot.spring.config;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -17,8 +15,7 @@ import org.springframework.web.socket.WebSocketHandler;
 import org.springframework.web.socket.WebSocketMessage;
 import org.springframework.web.socket.WebSocketSession;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.alibaba.fastjson.JSON;
 
 import boot.spring.po.Message;
 import boot.spring.service.LoginService;
@@ -50,7 +47,8 @@ public class MyWebSocketHandler implements WebSocketHandler {
 			Message msg = new Message();
 			msg.setFrom(0L);//0表示上线消息
 			msg.setText(username);
-			this.broadcast(new TextMessage(new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create().toJson(msg)));
+//			this.broadcast(new TextMessage(new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create().toJson(msg)));
+			this.broadcast(new TextMessage(JSON.toJSONString(msg)));
 		}
 	}
 
@@ -60,9 +58,9 @@ public class MyWebSocketHandler implements WebSocketHandler {
 	public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {
 			if(message.getPayloadLength()==0)
 				return;
-			Message msg=new Gson().fromJson(message.getPayload().toString(),Message.class);
+			Message msg=JSON.parseObject(message.getPayload().toString(),Message.class);
 			msg.setDate(new Date());
-			sendMessageToUser(msg.getTo(), new TextMessage(new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create().toJson(msg)));
+			sendMessageToUser(msg.getTo(), new TextMessage(JSON.toJSONString(msg)));
 	}
 
 	/**
@@ -84,7 +82,7 @@ public class MyWebSocketHandler implements WebSocketHandler {
 				Message msg = new Message();
 				msg.setFrom(-2L);
 				msg.setText(username);
-				this.broadcast(new TextMessage(new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create().toJson(msg)));
+				this.broadcast(new TextMessage(JSON.toJSONString(msg)));
 				break;
 			}
 		}
@@ -106,7 +104,8 @@ public class MyWebSocketHandler implements WebSocketHandler {
 				Message msg = new Message();
 				msg.setFrom(-2L);//下线消息，用-2表示
 				msg.setText(username);
-				this.broadcast(new TextMessage(new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create().toJson(msg)));
+//				this.broadcast(new TextMessage(new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create().toJson(msg)));
+				this.broadcast(new TextMessage(JSON.toJSONString(msg)));
 				break;
 			}
 		}
@@ -162,5 +161,5 @@ public class MyWebSocketHandler implements WebSocketHandler {
 			session.sendMessage(message);
 		}
 	}
-
+	
 }

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 
-import com.google.gson.GsonBuilder;
+import com.alibaba.fastjson.JSON;
 
 import boot.spring.config.MyWebSocketHandler;
 import boot.spring.po.Message;
@@ -60,7 +60,7 @@ public class ChatController {
 		msg.setFromName("系统广播");
 		msg.setTo(0L);
 		msg.setText(text);
-		handler.broadcast(new TextMessage(new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create().toJson(msg)));
+		handler.broadcast(new TextMessage(JSON.toJSONString(msg)));
 	}
 
 	@RequestMapping("getuid")
