@@ -27,7 +27,6 @@ public class Login {
 		if(realpwd!=null&&pwd.equals(realpwd))
 		{
 			long uid=loginservice.getUidbyname(username);
-			httpSession.setAttribute("username", username);
 			httpSession.setAttribute("uid", uid);
 			return "chatroom";
 		}else
@@ -41,8 +40,6 @@ public class Login {
 	
 	@RequestMapping("/logout")
 	public String logout(HttpSession httpSession){
-		httpSession.removeAttribute("username");
-		httpSession.removeAttribute("uid");
 		return "login";
 	}
 	
