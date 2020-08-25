@@ -1,6 +1,5 @@
 package boot.spring.config;
 
-
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -14,7 +13,6 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
 import com.alibaba.druid.pool.DruidDataSource;
-
 /**
  * 配置数据源，指定mapper包的扫描路径和SessionFactory对象
  */

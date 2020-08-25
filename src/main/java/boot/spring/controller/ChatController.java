@@ -6,8 +6,11 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
+import javax.websocket.server.PathParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,37 +23,34 @@ import org.springframework.web.socket.WebSocketSession;
 
 import com.alibaba.fastjson.JSON;
 
-import boot.spring.config.MyWebSocketHandler;
 import boot.spring.po.Message;
 import boot.spring.po.User;
 import boot.spring.service.LoginService;
+import boot.spring.service.WebSocketServer;
 
 @Controller
 public class ChatController {
-	@Autowired
-	MyWebSocketHandler handler;
 
 	@Autowired
 	LoginService loginservice;
+	
 
 	@RequestMapping("/onlineusers")
 	@ResponseBody
-	public Set<String> onlineusers(HttpSession session) {
-		Map<Long, WebSocketSession> map = MyWebSocketHandler.userSocketSessionMap;
-		Set<Long> set = map.keySet();
-		Iterator<Long> it = set.iterator();
+	public Set<String> onlineusers(@RequestParam("currentuser") String currentuser) {
+		ConcurrentHashMap<String, Session> map = WebSocketServer.getSessionPools();
+		Set<String> set = map.keySet();
+		Iterator<String> it = set.iterator();
 		Set<String> nameset = new HashSet<String>();
 		while (it.hasNext()) {
-			Long entry = it.next();
-			String name = loginservice.getnamebyid(entry);
-			String user = (String) session.getAttribute("username");
-			if (!user.equals(name))
-				nameset.add(name);
+			String entry = it.next();
+			if (!entry.equals(currentuser))
+				nameset.add(entry);
 		}
 		return nameset;
 	}
 
-	// 发布系统广播（群发）
+	/** 发布系统广播（群发）
 	@RequestMapping(value = "broadcast", method = RequestMethod.POST)
 	@ResponseBody
 	public void broadcast(@RequestParam("text") String text) throws IOException {
@@ -62,6 +62,7 @@ public class ChatController {
 		msg.setText(text);
 		handler.broadcast(new TextMessage(JSON.toJSONString(msg)));
 	}
+	**/
 
 	@RequestMapping("getuid")
 	@ResponseBody

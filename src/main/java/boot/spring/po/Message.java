@@ -5,31 +5,29 @@ import java.util.Date;
 import com.alibaba.fastjson.annotation.JSONField;
 public class Message {
 
-	//发送者
-	public Long from;
-	//发送者名称
-	public String fromName;
-	//接收者
-	public Long to;
+	//发送者name
+	public String from;
+	//接收者name
+	public String to;
 	//发送的文本
 	public String text;
 	//发送时间
 	@JSONField(format="yyyy-MM-dd HH:mm:ss")
 	public Date date;
 
-	public Long getFrom() {
+	public String getFrom() {
 		return from;
 	}
 
-	public void setFrom(Long from) {
+	public void setFrom(String from) {
 		this.from = from;
 	}
 
-	public Long getTo() {
+	public String getTo() {
 		return to;
 	}
 
-	public void setTo(Long to) {
+	public void setTo(String to) {
 		this.to = to;
 	}
 
@@ -39,14 +37,6 @@ public class Message {
 
 	public void setText(String text) {
 		this.text = text;
-	}
-
-	public String getFromName() {
-		return fromName;
-	}
-
-	public void setFromName(String fromName) {
-		this.fromName = fromName;
 	}
 
 	public Date getDate() {
