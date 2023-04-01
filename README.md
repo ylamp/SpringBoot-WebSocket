@@ -22,6 +22,24 @@
 
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/1121/155029_5e3afabc_1110335.jpeg "在这里输入图片标题")
 
+### 著作权
+#### 匠心巨制，震撼上市
+![输入图片说明](https://gitee.com/shenzhanwang/Spring-elastic_search/raw/master/pic/mmexport1680185330486.jpg)
+
+|购买地址|
+|--|
+|<a href="https://item.jd.com/10071773246182.html" target="_blank">京东商城购买地址</a> |
+|<a href="http://product.dangdang.com/11417701354.html" target="_blank">当当网购买地址</a>|
+### 专利文章
+1. [一种基于微服务架构的车联网大数据分析系统](https://mp.weixin.qq.com/s?__biz=Mzg5MjY3OTk0OQ==&mid=2247484096&idx=1&sn=11677bc50cd18e448135319394238e80&chksm=c03b20a2f74ca9b41c7d1c1e60e1407e1530a98b86498822f387da26e551826f8136663b45a0#rd)
+2. [一种流式数据场景下Elasticsearch索引的自动化扩容方法](https://mp.weixin.qq.com/s?__biz=Mzg5MjY3OTk0OQ==&mid=2247484167&idx=1&sn=94587b5e196bbda2d6cc4b976b03d0c7&chksm=c03b2165f74ca873b77380a23c4e06b71adf6ffc40634440f467fb71c20aa4cc2fe72a5d65a9#rd)
+3. [大数据钻取分析方法、装置、设备及存储介质](https://mp.weixin.qq.com/s?__biz=Mzg5MjY3OTk0OQ==&mid=2247484385&idx=1&sn=6fe4a4ac34badd91db39b4cc042a3f18&chksm=c03b2183f74ca89508333f3d5c8330aa32248eda86e4cf7657a5a293e1bf9d49888fe78b1072#rd)
+
+### 视频教程
+|![输入图片说明](https://gitee.com/shenzhanwang/RuoYi-activiti/raw/ruoyi-activiti/pic/%E5%B0%81%E9%9D%A2.png)|
+|--|
+|<div align=center><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg5MjY3OTk0OQ==&action=getalbum&album_id=2790222720155451398#wechat_redirect" target="_blank">RuoYi-activiti开发指南</a></div> |
+
 ### 附录：中央技术储备仓库（Central Technique Reserve Repository）
 
 #### 基础篇:职业化，从做好OA系统开始
@@ -65,7 +83,7 @@
 29. 使用Flink实现流批一体化的分布式计算
 30. 搭建高可用nginx集群和Tomcat负载均衡 
 31. 使用mycat实现Mysql数据库的主从复制、读写分离、分表分库、负载均衡和高可用 
-32. [Spring boot整合Elastic search实现全文检索和大数据分析](https://gitee.com/shenzhanwang/Spring-elastic_search) ![输入图片说明](https://img.shields.io/badge/-%E6%8B%9B%E7%89%8C-yellow.svg "在这里输入图片标题")
+32. [《Elasticsearch数据搜索与分析实战》源码](https://gitee.com/shenzhanwang/Spring-elastic_search) ![输入图片说明](https://img.shields.io/badge/-%E6%8B%9B%E7%89%8C-yellow.svg "在这里输入图片标题")
 #### 特别篇：分布式事务和并发控制
 33. 基于可靠消息最终一致性实现分布式事务（activeMQ）
 34. Spring boot dubbo整合seata实现分布式事务![输入图片说明](https://img.shields.io/badge/-%E7%B2%BE%E5%93%81-orange.svg "在这里输入图片标题")
@@ -79,8 +97,7 @@
 38. 并发控制：使用zookeeper实现分布式锁 
 39. 并发控制：Java多线程编程实例
 40. 并发控制：使用netty实现高性能NIO通信 
-### 视频教程
-![输入图片说明](%E5%B0%81%E9%9D%A2.png)
-<a href="https://www.roncoo.com/view/1551481849552183297" target="_blank">RuoYi-activiti开发指南</a>
+
 ### 关注微信公众号获取更多技术文章和源码
-![输入图片说明](https://images.gitee.com/uploads/images/2021/1022/183316_f03b4f99_1110335.jpeg "qrcode_for_gh_4c2318bb0f7f_258.jpg")
+
+![输入图片说明](https://gitee.com/shenzhanwang/Spring-elastic_search/raw/master/pic/qrcode_for_gh_4c2318bb0f7f_258.jpg)
