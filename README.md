@@ -36,8 +36,10 @@
 3. [大数据钻取分析方法、装置、设备及存储介质](https://mp.weixin.qq.com/s?__biz=Mzg5MjY3OTk0OQ==&mid=2247484385&idx=1&sn=6fe4a4ac34badd91db39b4cc042a3f18&chksm=c03b2183f74ca89508333f3d5c8330aa32248eda86e4cf7657a5a293e1bf9d49888fe78b1072#rd)
 
 ### 视频教程
-|![输入图片说明](https://gitee.com/shenzhanwang/RuoYi-activiti/raw/ruoyi-activiti/pic/%E5%B0%81%E9%9D%A2.png)|
+|![输入图片说明](https://gitee.com/shenzhanwang/Spring-elastic_search/raw/master/pic/small.png)|
 |--|
+|<div align=center><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg5MjY3OTk0OQ==&action=getalbum&album_id=2862983682029043714#wechat_redirect" target="_blank">Elasticsearch数据搜索与分析实战演练</a></div> |
+|![输入图片说明](https://gitee.com/shenzhanwang/RuoYi-activiti/raw/ruoyi-activiti/pic/%E5%B0%81%E9%9D%A2.png)|
 |<div align=center><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg5MjY3OTk0OQ==&action=getalbum&album_id=2790222720155451398#wechat_redirect" target="_blank">RuoYi-activiti开发指南</a></div> |
 
 ### 附录：中央技术储备仓库（Central Technique Reserve Repository）
